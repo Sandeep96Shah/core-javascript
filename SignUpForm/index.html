@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <form id="signUpForm">
+      <div className="field-container">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          ,
+          name="username"
+          minlength="4"
+          required
+        />
+      </div>
+
+      <div className="field-container">
+        <label for="email">Email</label>
+        <input type="email" id="email" , name="email" required />
+      </div>
+
+      <div className="field-container">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          ,
+          name="password"
+          required
+          minlength="6"
+        />
+      </div>
+
+      <div className="field-container" id="password-container">
+        <label for="confirmPassword">Confirm Password</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          name="confirmPassword"
+          required
+          minlength="6"
+        />
+      </div>
+
+      <button type="submit">Sign Up</button>
+    </form>
+    <script src="index.js"></script>
+  </body>
+</html>
