@@ -87,15 +87,28 @@
 // Here the concept to note that when same time is there for setTimeout and setInterval
 // then preference is given to setTimeout
 let a = true;
+let count = 0;
 setTimeout(() => {
   console.log("Set Timeout");
   a = false;
-}, 1000);
+}, 2000);
 setInterval(() => {
   if(a){
-    console.log("Set Interval")
+    console.log(count);
   }
-}, 1000);
+}, 200);
+
+let b = true;
+let counter = 0;
+
+setTimeout(() => {
+  console.log("SetTimeout")
+  b = false;
+}, 2000);
+
+while(b){
+  console.log()
+}
 
 setInterval(() => {
   console.log("Set Interval 2");
@@ -103,3 +116,53 @@ setInterval(() => {
 setInterval(() => {
     console.log("Set Interval 1")
 }, 1000);
+
+
+// Start 
+
+console.log('1');
+
+Promise.resolve()
+  .then(() => {
+    console.log('2');
+    return Promise.resolve('3');
+  })
+  .then((value) => {
+    console.log(value);
+    throw new Error('4');
+  })
+  .then(() => {
+    console.log('5');
+  })
+  .catch((error) => {
+    console.log(error.message);
+    return '6';
+  })
+  .then((value) => {
+    console.log(value);
+  })
+  .then(() => {
+    console.log("End");
+  });
+
+console.log('7');
+
+setTimeout(() => {
+  console.log('8');
+}, 0);
+
+Promise.resolve().then(() => console.log('9'));
+
+// 1
+// 7
+// 2
+// 9
+// 3
+// 4
+// 6
+// End
+// 8
+
+
+// End
+
