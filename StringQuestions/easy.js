@@ -18,7 +18,7 @@ function reverseStrReduce(str){
 
 console.log(reverseStrReduce(str));
 
-// Check for a palindrome
+// 2. Check for a palindrome
 
 const str1 = "madam";
 const str2 = "hello";
@@ -38,7 +38,7 @@ function palindromeStr(str){
 console.log(palindromeStr(str1));
 console.log(palindromeStr(str2));
 
-// Count the number of vowels in a string
+// 3. Count the number of vowels in a string
 const str4 = "I am Sandeep Kumar Shah";
 
 function vowels(str){
@@ -65,7 +65,7 @@ function vowelsSet(str){
 
 console.log(vowels(str4));
 
-// Remove all duplicate characters
+// 4. Remove all duplicate characters
 const str5 = "qqwweerrttyy";
 
 function removeDuplicate(str){
@@ -85,3 +85,39 @@ function removeDuplicate1(str){
     return result;
 }
 console.log(removeDuplicate1(str5));
+
+
+// 5. Check if two strings are anagrams
+
+
+const anagram1 = "hello";
+const anagram2 = "olleh"
+const anagram3 = "world";
+
+function isAnagrams(str1, str2){
+    if(str1.length !== str2.length) return false;
+    const uniqueStr1 = [...new Set(str1)].join("");
+    const uniqueStr2 = [...new Set(str2)].join("");
+    if(uniqueStr1.length !== uniqueStr2.length) return false;
+    
+    for(const char of uniqueStr2){
+        if(!uniqueStr1.includes(char)) return false;
+    }
+    return true;
+}
+
+console.log(isAnagrams(anagram1, anagram2))
+console.log(isAnagrams(anagram1, anagram3))
+
+function isAnagrams1(str1, str2){
+   const normalize = (str) => str.split("").sort().join("");
+   return normalize(str1) === normalize(str2)
+}
+
+console.log(isAnagrams1(anagram1, anagram2))
+console.log(isAnagrams1(anagram1, anagram3))
+
+
+
+
+
