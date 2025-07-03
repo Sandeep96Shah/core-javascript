@@ -1,4 +1,4 @@
-// reverse a string
+// 1.  reverse a string
 
 const str = "hello";
 
@@ -17,3 +17,5 @@ function reverseStrReduce(str){
 }
 
 console.log(reverseStrReduce(str));
+
+
