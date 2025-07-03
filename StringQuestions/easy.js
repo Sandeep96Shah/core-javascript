@@ -55,10 +55,10 @@ function vowels(str){
 console.log(vowels(str4));
 
 function vowelsSet(str){
-    const vowels = new Set(["a", "e", "i", "o", "u"]);
+    const vowels = "aeiou";
     let count = 0;
     for(const char of str){
-        if(vowels.has(char)) count++
+        if(vowels.includes(char)) count++
     }
     return count;
 }
