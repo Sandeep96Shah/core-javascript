@@ -38,4 +38,29 @@ function palindromeStr(str){
 console.log(palindromeStr(str1));
 console.log(palindromeStr(str2));
 
+// Count the number of vowels in a string
+const str4 = "I am Sandeep Kumar Shah";
 
+function vowels(str){
+    let count = 0;
+    for(const char of str){
+        const ch = char.toLowerCase();
+        if(ch === "a" || ch === "e" || ch === "i" || ch === "o" || ch === "u"){
+                count++;
+        }
+    }
+    return count;
+}
+
+console.log(vowels(str4));
+
+function vowelsSet(str){
+    const vowels = new Set(["a", "e", "i", "o", "u"]);
+    let count = 0;
+    for(const char of str){
+        if(vowels.has(char)) count++
+    }
+    return count;
+}
+
+console.log(vowels(str4));
