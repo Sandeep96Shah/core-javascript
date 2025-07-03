@@ -64,3 +64,24 @@ function vowelsSet(str){
 }
 
 console.log(vowels(str4));
+
+// Remove all duplicate characters
+const str5 = "qqwweerrttyy";
+
+function removeDuplicate(str){
+    const unique = new Set(str);
+    return Array.from(unique).join("");
+}
+
+console.log(removeDuplicate(str5));
+
+function removeDuplicate1(str){
+    let result = ""
+    for(const char of str){
+        if(!result.includes(char)){
+            result += char;
+        }
+    }
+    return result;
+}
+console.log(removeDuplicate1(str5));
