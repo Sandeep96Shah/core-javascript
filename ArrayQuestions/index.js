@@ -24,7 +24,7 @@ function getSecondLargestNum(nums) {
 
 console.log(getSecondLargestNum([1, 1, 1, 1, 1, 1, 1]));
 
-// Move all zeros to the end of the array
+// 3. Move all zeros to the end of the array
 function moveAllZerosAtEnd(nums) {
   let nonZeroIndex = 0;
 
@@ -44,3 +44,14 @@ function moveAllZerosAtEnd(nums) {
 }
 
 console.log(moveAllZerosAtEnd([0, 1, 0, 3, 12]));
+
+// 4. Find the intersection of two arrays
+function intersection(nums1, nums2) {
+  const result = [];
+  for (const num of nums1) {
+    if (nums2.includes(num) && !result.includes(num)) result.push(num);
+  }
+  return result;
+}
+
+console.log(intersection([1, 2, 2, 3], [2, 3, 4]));
