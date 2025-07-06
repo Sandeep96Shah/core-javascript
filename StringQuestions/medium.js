@@ -75,3 +75,5 @@ function isOnlyDigits(str) {
 console.log(isOnlyDigits("123")); // true
 console.log(isOnlyDigits("123a")); // false
 console.log(isOnlyDigits("")); // false
+
+//  5. Longest common prefix among array of strings
