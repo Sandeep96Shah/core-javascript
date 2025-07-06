@@ -76,3 +76,10 @@ function getAllTargetValues(nums, target) {
 }
 
 console.log(getAllTargetValues([1, 2, 3, 4], 5));
+
+// 6. Rotate an array by k steps
+function rotateNumsByK(nums, k) {
+  return [...nums.slice(nums.length - k), ...nums.slice(0, nums.length - k)];
+}
+
+console.log(rotateNumsByK([1, 2, 3, 4, 5], 2));
