@@ -54,3 +54,15 @@ function compressStr(str) {
   return result;
 }
 console.log(compressStr(str));
+
+//  3. Check if one string is a rotation of another
+
+function isRotation(s1, s2){
+  if(s1.length !== s2.length) return false;
+
+  return (s1+s1).includes(s2);
+}
+
+console.log(isRotation("waterbottle", "erbottlewat")); // true
+console.log(isRotation("hello", "lohel"));             // true
+console.log(isRotation("hello", "olelh"));             // false
