@@ -55,3 +55,24 @@ function intersection(nums1, nums2) {
 }
 
 console.log(intersection([1, 2, 2, 3], [2, 3, 4]));
+
+// 5. Find all pairs that sum to a specific value
+function getAllTargetValues(nums, target) {
+  const result = [];
+  const keysList = new Set();
+
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
+      const pair = [nums[i], nums[j]].sort((a, b) => a - b);
+      const key = pair.join("");
+
+      if (nums[i] + nums[j] === target && !keysList.has(key)) {
+        result.push([nums[i], nums[j]]);
+        keysList.add(key);
+      }
+    }
+  }
+  return result;
+}
+
+console.log(getAllTargetValues([1, 2, 3, 4], 5));
