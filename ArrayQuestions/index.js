@@ -83,3 +83,14 @@ function rotateNumsByK(nums, k) {
 }
 
 console.log(rotateNumsByK([1, 2, 3, 4, 5], 2));
+
+
+function firstDuplicate(arr) {
+    const seen = new Set();
+    for (let num of arr) {
+      if (seen.has(num)) return num;
+      seen.add(num);
+    }
+    return -1;
+  }
+  
